@@ -9,7 +9,7 @@ import { ApiVentaService } from '../servicios/apiVenta.service';
 export class HomeComponent implements OnInit {
 
   public lst: any;
-  public columns: string[] = ['Id', 'Nombre', 'Fecha', 'Total']
+  public columnas: string[] = ['Id', 'Nombre', 'Fecha', 'Total'];
 
   constructor(private apiVenta: ApiVentaService) { }
 
@@ -19,10 +19,7 @@ export class HomeComponent implements OnInit {
 
   DevolucionDatos(){
     this.apiVenta.ObtenerVentas().subscribe(resp => {
-      if(resp.exito == 1){
         this.lst = resp.data;
-      }
-    })
-  }
-
+      });
+    }
 }

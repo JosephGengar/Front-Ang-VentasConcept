@@ -1,5 +1,5 @@
 export interface respuesta{
-    exito: number,
-    data: any,
-    mensajes: string,
+    exito: number;
+    data: any;
+    mensajes: string;
 }
