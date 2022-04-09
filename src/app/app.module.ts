@@ -7,10 +7,13 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatTableModule} from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
+import { DialogComponent } from './home/dialog/dialog.component'
+import { MatDialogModule} from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +21,8 @@ import { MatButtonModule } from '@angular/material/button';
     BrowserAnimationsModule,
     HttpClientModule,
     MatTableModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,14 @@
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Injectable} from "@angular/core";
 import { respuesta } from "models/respuesta";
+import { venta } from "models/venta";
 import { Observable } from "rxjs";
+
+const httpOptions = {
+    headers: new HttpHeaders({
+        'Contend-type': 'application/json'
+    })
+};
 
 @Injectable({
     providedIn: 'root'
@@ -17,4 +24,8 @@ export class ApiVentaService{
     ObtenerVentas():Observable<respuesta>{
         return this.http.get<respuesta>(this.url);
     }
+    RegistrarVentas(venta: venta):Observable<respuesta>{
+        return this.http.post<respuesta>(this.url, venta)
+    }
+
 }
