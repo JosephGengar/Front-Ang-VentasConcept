@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { ApiVentaService } from '../servicios/apiVenta.service';
+import { DialogComponent } from './dialog/dialog.component';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +13,8 @@ export class HomeComponent implements OnInit {
   public lst: any;
   public columnas: string[] = ['Id', 'Nombre', 'Fecha', 'Total'];
 
-  constructor(private apiVenta: ApiVentaService) { }
+  constructor(private apiVenta: ApiVentaService,
+              private dialogRef: MatDialog) { }
 
   ngOnInit(): void {
     this.DevolucionDatos();
@@ -22,4 +25,11 @@ export class HomeComponent implements OnInit {
         this.lst = resp.data;
       });
     }
+
+  OpenDialog(){
+    const dialog = this.dialogRef.open(DialogComponent, {
+      width: '650px',
+      height:'400px',
+    })
+  }
 }

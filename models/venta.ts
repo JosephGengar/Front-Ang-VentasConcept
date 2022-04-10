@@ -1,6 +1,6 @@
-import { conceptos } from "./conceptos";
+import { conceptos } from './conceptos';
 
 export interface venta{
     Nombrecliente: string;
-    Concepto: conceptos[];
+    Conceptos: conceptos[];
 }

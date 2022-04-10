@@ -25,7 +25,7 @@ export class ApiVentaService{
         return this.http.get<respuesta>(this.url);
     }
     RegistrarVentas(venta: venta):Observable<respuesta>{
-        return this.http.post<respuesta>(this.url, venta)
+        return this.http.post<respuesta>(this.url, venta, httpOptions)
     }
 
 }

@@ -1,7 +1,7 @@
 <div class="cont">
     <h1 class="h1style">Ventas de mi Local</h1>
     <div>
-        <button mat-raised-button color="primary">Agregar Venta</button>
+        <button mat-raised-button color="primary" (click)="OpenDialog()">Agregar Venta</button>
     </div><br>
     <div>
         <table mat-table [dataSource]="lst">
