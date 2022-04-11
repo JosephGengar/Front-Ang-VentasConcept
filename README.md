@@ -6,9 +6,11 @@ del back-end y la suma de los diferentes conceptos.
 
 ![Ven1](https://user-images.githubusercontent.com/102115164/162787142-f768d4d6-2f1f-41d1-a7ce-cbb7a4c7e9ce.png)
 
+el boton [subir detalle] permite agregar mas item a la lista de conceptos que luego seran todos sumados para dar el total.
+
 ![ven2](https://user-images.githubusercontent.com/102115164/162787181-aa8c75b2-657c-4967-b11a-75a682c6bd0e.png)
 
-
+Tecnologias utilizadas: Angular / Material, Net Core, C#.
 
 ## Development server
 
